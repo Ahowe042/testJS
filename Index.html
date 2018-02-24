@@ -3,28 +3,34 @@
 <title>MyFirstJavaScriptPage</title>
 <body>
 
+<!-- This line imports the JavaScript file (.js) so we can call the defined functions later on in our HTML code -->
 <script type="text/javascript" src="test1.js"></script>
 
 <h1>My First JavaScript Page</h1>
 
 <p id="test" style.display="block">Click the button to hide me!</p>
 
+<!-- The following two lines activate JavaScript code directly within the HTML to change the style.
+THIS IS BAD CODE STRUCTURE. JavaScript should be maintained in separate files. I included this to show
+that JavaScript IS capable of completing tasks directly in HTML code -->
 <button type="button" onclick="document.getElementById('test').style.display='none'">Hide</button>
 <button type="button" onclick="document.getElementById('test').style.display='block'">Unhide</button>
 
-<p id="formatP2">This is the original paragraph. As you can see, no special formatting has been applied to this paragraph.</p>
+<p id="formatP2" color="red">This is the original paragraph. As you can see, no special formatting has been applied to this paragraph.</p>
 
-<div id="formatD2">
-<ul id="formatL2" style="list-style-type:disc">
+<!-- This is an ordered list with type "I", which simply means the list items will appear
+with Roman Numerals before each one -->
+<ol id="formatL2" type="I">
   <li>Lions</li>
   <li>Tigers</li>
   <li>Bears</li>
   <li>Oh my!</li>
-</ul>
-</div>
+</ol>
 
-<button type="button" onclick="changeFormat()">Change Format</button>
-<button type="button" onclick="revertFormat()">Revert Format</button>
+<!-- Both of these buttons call functions within their *onclick* event. Function names are indicated by the
+parentheses after the function name, which is common nomenclature among most programming languages -->
+<button type="button" onclick="revertFormat()">OLD Format</button>
+<button type="button" onclick="changeFormat()">NEW Format</button>
 
 </body>
 </html>
