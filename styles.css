@@ -1,0 +1,20 @@
+body {
+  background-color: #80bfff;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+button {
+  font-size: 15px;
+}
+
+#nav-bar a:hover {
+  color: #ff3300;r
+  font-size: 24px;
+}
+
+#maincontent {
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-top: 70px;
+}
