@@ -8,9 +8,24 @@ button {
   font-size: 15px;
 }
 
-#nav-bar a:hover {
-  color: #ff3300;r
-  font-size: 24px;
+#nav-bar {
+  height: 100%;
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background: #ffff66;
+  padding: 10px 0;
+  font-family: Helvetica;
+}
+
+.nav-item {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #0066cc;
+  display: block;
 }
 
 #maincontent {

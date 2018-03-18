@@ -40,3 +40,29 @@ function transformPage2() {
     x[i].style = "padding: 30px 8px 6px 20px; text-decoration: none; font-size: 22px; color: #0066cc; display: inline"
   }
 }
+
+// This function utilizes the browser window prompt to capture a user's name, then output it using a variable
+function displayName() {
+  var uName = prompt("Please enter your name", "Darth Vader");
+
+  if (uName === null || uName === "") {
+    alert("Please enter your name for a pleasant greeting. :)");
+  } else {
+    alert("Hello, " + uName + ", it is nice to meet you!");
+  }
+}
+
+// This function utilizes the browser window prompt to capture two values, then addes them together and displays the output
+function doMath() {
+  var firstNumStr = prompt("Please enter the first number to be added", 1);
+  var secNumStr = prompt("Please enter the second number to be added", 1);
+
+  var firstNum = parseInt(firstNumStr);
+  var secNum = parseInt(secNumStr);
+
+  if (isNaN(firstNum) || isNaN(secNum)) {
+    alert("Nice try! You need to enter two valid numbers!");
+  } else {
+    alert(firstNum + secNum);
+  }
+}
