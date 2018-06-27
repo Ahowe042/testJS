@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <title>MyFirstJavaScriptPage</title>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
 
 <!-- This line imports the JavaScript file (.js) so we can call the defined functions later on in our HTML code -->
 <script type="text/javascript" src="test1.js"></script>
 
-<h1>My First JavaScript Page</h1>
+<!-- This creates the navigation bar elements and provides us with a unique element id -->
+<div id="nav-bar">
+  <a href="#home" class="nav-item">Home</a>
+  <a href="#about" class="nav-item">About</a>
+  <a href="#contact" class="nav-item">Contact</a>
+</div>
+
+<!-- All content on the main page is contained within this div container. I use this div to create a uniform style using CSS in the "styles.css" sheet -->
+<div id="maincontent">
+<h1>JavaScript Test Page</h1>
 
 <p id="test" style.display="block">Click the button to hide me!</p>
 
@@ -16,7 +30,9 @@ that JavaScript IS capable of completing tasks directly in HTML code -->
 <button type="button" onclick="document.getElementById('test').style.display='none'">Hide</button>
 <button type="button" onclick="document.getElementById('test').style.display='block'">Unhide</button>
 
-<p id="formatP2" color="red">This is the original paragraph. As you can see, no special formatting has been applied to this paragraph.</p>
+<hr >
+
+<p id="formatP2" color="red">This is the original paragraph. As you can see, no <br>special formatting has been applied to this paragraph.</p>
 
 <!-- This is an ordered list with type "I", which simply means the list items will appear
 with Roman Numerals before each one -->
@@ -29,8 +45,22 @@ with Roman Numerals before each one -->
 
 <!-- Both of these buttons call functions within their *onclick* event. Function names are indicated by the
 parentheses after the function name, which is common nomenclature among most programming languages -->
-<button type="button" onclick="revertFormat()">OLD Format</button>
-<button type="button" onclick="changeFormat()">NEW Format</button>
+<button type="button" onclick="revertFormat()">Old Format</button>
+<button type="button" onclick="changeFormat()">New Format</button>
 
+<hr >
+
+<!-- These buttons call the two JavaScript functions which modify the placement and appearance of the navigation bar -->
+<p>Click the buttons below to change page layout.</p>
+<button type="button" onclick="transformPage1()">Layout 1</button>
+<button type="button" onclick="transformPage2()">Layout 2</button>
+
+<hr >
+
+<!-- These buttons call the JavaScript functions for displaying your name and performing math problems -->
+<p>Name and Arithmetic</p>
+<button type="button" onclick="displayName()">Prompt for Name</button>
+<button type="button" onclick="doMath()">Prompt for Numbers</button>
+</div>
 </body>
 </html>
